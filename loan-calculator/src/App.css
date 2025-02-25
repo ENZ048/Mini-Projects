@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@media (max-width: 786px) {
+    .container{
+        flex-direction: column;
+    }
+    .output-container{
+        width: 80%;
+    }
+    .output-container h1{
+        font-size: 1.2rem;
+    }
+}
