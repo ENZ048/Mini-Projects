@@ -72,6 +72,10 @@ export default function QuizApp() {
     }
   };
 
+  const handleSkipQuestion = () => {
+    handleNextQuestion();
+  };
+
   const restartQuiz = () => {
     setCurrentQuestion(0);
     setScore(0);
@@ -139,6 +143,13 @@ export default function QuizApp() {
               </button>
             ))}
           </div>
+
+          <button
+            onClick={handleSkipQuestion}
+            className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 cursor-pointer"
+          >
+            Skip Question
+          </button>
 
           <p className="mt-2 text-red-500 font-bold">Time left: {timeLeft}s</p>
         </>
